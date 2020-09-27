@@ -7,12 +7,13 @@
       additional_dependencies: ['@commitlint/config-conventional']
 
 - repo: https://github.com/adrienverge/yamllint.git
-  rev: v1.24.0
+  rev: v1.14.0
   hooks:
-     - id: yamllint
-       files: \.(yaml|yml)$
-       types: [file, yaml]
-       entry: yamllint --strict -f parsable
+    - id: yamllint
+      files: \.(yaml|yml)$
+      types: [file, yaml]
+      language: python
+      entry: yamllint -c .yamllint.yml
 - repo: https://github.com/ansible/ansible-lint.git
   rev: v4.3.5
   hooks:
