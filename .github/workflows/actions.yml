@@ -11,6 +11,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@master
+      - name: install semantic release
+        run: npm install @google/semantic-release-replace-plugin -D
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v2
         with:
