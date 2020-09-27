@@ -16,7 +16,6 @@ jobs:
       - uses: dorny/paths-filter@v2.2.1
         id: filter
         with:
-          # inline YAML or path to separate file (e.g.: .github/filters.yaml)
           filters: |
             win_docker:
               - 'ronmallory/win_nuget/*'
@@ -28,5 +27,5 @@ jobs:
         uses: artis3n/ansible_galaxy_collection@v2
         with:
           api_key: '${{ secrets.GALAXY_API_KEY }}'
-          collection_dir: './ronmallory/win_docker'
+          collection_dir: './ronmallory/win_nuget'
 ...
