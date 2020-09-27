@@ -10,7 +10,6 @@ description: |
   windows server.
 license:
   - AGPL-3.0-or-later
-license_file: LICENSE
 tags:
   - windows
   - nuget
