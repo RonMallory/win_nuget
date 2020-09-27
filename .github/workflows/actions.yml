@@ -2,7 +2,7 @@
 # actions yaml for repo pipeline
 name: lint
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
 
@@ -24,6 +24,7 @@ jobs:
             @semantic-release/github
             @semantic-release/changelog
             @semantic-release/git
+          dry_run: 'true'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 

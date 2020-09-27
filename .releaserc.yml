@@ -20,7 +20,4 @@ plugins:
   #    - foo/*.py
   - "@semantic-release/github"
   - "@semantic-release/changelog"
-release:
-  branches:
-    - "master"
 ...
