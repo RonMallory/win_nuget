@@ -1,0 +1,6 @@
+---
+# handlers file for win_nuget
+- name: restart
+  win_reboot:
+  when: path_results is changed
+...

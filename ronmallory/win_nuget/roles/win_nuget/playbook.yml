@@ -1,0 +1,9 @@
+---
+- name: win_nuget default playbook
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: "Include win_nuget"
+      include_role:
+        name: "win_nuget"
+...

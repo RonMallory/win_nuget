@@ -1,0 +1,17 @@
+---
+- name: Converge
+  hosts: 127.0.0.1
+  gather_facts: 'false'
+  vars:
+    ansible_user: vagrant
+    ansible_password: vagrant
+    ansible_connection: winrm
+    ansible_winrm_transport: basic
+    ansible_port: 55985
+    ansible_winrm_server_cert_validation: ignore
+    ansible_winrm_scheme: http
+  tasks:
+    - name: "Include win_nuget"
+      include_role:
+        name: "win_nuget"
+...

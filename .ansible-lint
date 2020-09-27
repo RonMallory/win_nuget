@@ -1,0 +1,7 @@
+---
+warn_list:
+  # Commands should not change things if nothing needs doing
+  - '301'
+  # Use shell only when shell functionality is required
+  - '305'
+...
