@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  gather_facts: 'false'
+  tasks:
+    - name: vagrant up
+      shell: vagrant up
+      register: up_results
+
+    - name: start vagrant local box
+      shell: vagrant snapshot push
+      register: push_results
+...

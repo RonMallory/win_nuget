@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  gather_facts: 'false'
+  tasks:
+    - name: start vagrant
+      command: vagrant up
+
+    - name: take a snapshot
+      command: vagrant snapshot push
+...

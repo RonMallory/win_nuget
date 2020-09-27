@@ -1,0 +1,21 @@
+---
+namespace: ronmallory
+name: win_nuget
+version: 1.0.0
+readme: README.md
+authors:
+  - Ron Mallory Ronnymallory@gmail.com
+description: |
+  This collection installs and interacts with nuget.exe on a remote
+  windows server.
+license:
+  - AGPL-3.0-or-later
+license_file: LICENSE
+tags:
+  - windows
+  - nuget
+repository: http://example.com/repository
+documentation: http://docs.example.com
+homepage: http://example.com
+issues: http://example.com/issue/tracker
+...

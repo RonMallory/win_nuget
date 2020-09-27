@@ -1,0 +1,39 @@
+---
+# tasks file for win_nuget
+- name: enter code block to install and configure nuget
+  block:
+
+    - name: install Package Manager
+      win_psmodule:
+        name: PackageManagementProviderResource
+        state: present
+
+    - name: add nuget package source
+      win_dsc:
+        resource_name: "PackageManagementSource"
+        Ensure: "Present"
+        Name: "MyNuget"
+        ProviderName: "Nuget"
+        SourceUri: "{{ nuget.source }}"
+        InstallationPolicy: "{{ nuget.policy }}"
+
+    - name: install nuget.commandline
+      win_dsc:
+        resource_name: "PackageManagement"
+        name: "{{ nuget.package_name }}"
+        ProviderName: "Nuget"
+        source: "MyNuget"
+        RequiredVersion: "{{ nuget.version }}"
+        AdditionalParameters:
+          Destination: "{{ nuget.install_path }}"
+
+    - name: set path env var for nuget
+      ansible.windows.win_path:
+        elements:
+          - "{{ path_var }}"
+        name: "PATH"
+        scope: "machine"
+        state: "present"
+      notify: restart
+      register: path_results
+...

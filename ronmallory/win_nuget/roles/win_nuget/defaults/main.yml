@@ -1,0 +1,11 @@
+---
+# defaults file for win_nuget
+nuget:
+  package_name: 'nuget.commandline'
+  source: 'http://nuget.org/api/v2/'
+  version: '5.7.0'
+  policy: 'Trusted'
+  install_path: 'c:\buildtools'
+path_var: >-
+  {{ nuget.install_path }}\{{ nuget.package_name }}.{{ nuget.version }}\tools
+...
