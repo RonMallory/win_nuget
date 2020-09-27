@@ -5,4 +5,10 @@
     - id: commitlint
       stages: [commit-msg]
       additional_dependencies: ['@commitlint/config-conventional']
+
+- repo: https://github.com/ansible/ansible-lint.git
+  rev: v4.3.5
+  hooks:
+    - id: ansible-lint
+      files: \.(yaml|yml)$
 ...
