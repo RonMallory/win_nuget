@@ -1,7 +1,7 @@
 ---
 namespace: ronmallory
 name: win_nuget
-version: 1.0.0
+version: 1.0.1
 readme: README.md
 authors:
   - Ron Mallory Ronnymallory@gmail.com
@@ -14,8 +14,8 @@ license_file: LICENSE
 tags:
   - windows
   - nuget
-repository: http://example.com/repository
-documentation: http://docs.example.com
-homepage: http://example.com
-issues: http://example.com/issue/tracker
+repository: https://github.com/RonMallory/win_nuget
+documentation: https://github.com/RonMallory/win_nuget
+homepage: https://github.com/RonMallory/win_nuget
+issues: https://github.com/RonMallory/win_nuget/issues
 ...
