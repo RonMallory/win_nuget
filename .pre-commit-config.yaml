@@ -6,6 +6,12 @@
       stages: [commit-msg]
       additional_dependencies: ['@commitlint/config-conventional']
 
+- repo: https://github.com/adrienverge/yamllint.git
+  rev: v1.17.0
+  hooks:
+    - id: yamllint
+      args: [-c=.yamllint.yml]
+
 - repo: https://github.com/ansible/ansible-lint.git
   rev: v4.3.5
   hooks:
