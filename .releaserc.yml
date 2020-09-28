@@ -15,9 +15,9 @@ plugins:
         countMatches: true
   - "@semantic-release/release-notes-generator"
   - "@semantic-release/git"
-  #- - "@semantic-release/git"
-  #  - assets:
-  #    - foo/*.py
+  - - "@semantic-release/git"
+    - assets:
+      - ronmallory/win_nuget/galaxy.yml
   - "@semantic-release/github"
   - "@semantic-release/changelog"
 ...
