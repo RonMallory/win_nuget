@@ -5,8 +5,8 @@ plugins:
     - replacements:
       - files:
         - ronmallory/win_nuget/galaxy.yml
-        from: version = ".*"
-        to: version = "${nextRelease.version}"
+        from: "version: .*"
+        to: "version: '${nextRelease.version}'"
         results:
         - file: ronmallory/win_nuget/galaxy.yml
           hasChanged: true

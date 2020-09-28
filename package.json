@@ -1,0 +1,34 @@
+{
+  "name": "win_nuget",
+  "version": "1.0.0",
+  "description": "ansible role to install and configure win_nuget on a windows server",
+  "main": "commitlint.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RonMallory/win_nuget.git"
+  },
+  "keywords": [
+    "windows",
+    "nuget"
+  ],
+  "author": "Ron Mallory",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/RonMallory/win_nuget/issues"
+  },
+  "homepage": "https://github.com/RonMallory/win_nuget#readme",
+  "devDependencies": {
+    "@google/semantic-release-replace-plugin": "^1.0.1",
+    "@semantic-release/changelog": "^5.0.1",
+    "@semantic-release/commit-analyzer": "^8.0.1",
+    "@semantic-release/git": "^9.0.0",
+    "@semantic-release/github": "^7.1.1",
+    "@semantic-release/release-notes-generator": "^9.0.1",
+    "lodash": "^4.17.20",
+    "semantic-release": "^17.1.2",
+    "semantic-release-cli": "^5.4.0"
+  }
+}

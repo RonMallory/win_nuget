@@ -1,3 +1,5 @@
+# node
+node_modules/
 # vagrant
 .vagrant/
 # Byte-compiled / optimized / DLL files
