@@ -30,19 +30,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-  publish_win_nuget:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: dorny/paths-filter@v2.2.1
-        id: filter
-        with:
-          filters: |
-            win_docker:
-              - 'ronmallory/win_nuget/*'
-              - 'ronmallory/win_nuget/**/*'
-              - 'ronmallory/win_nuget/**/**/*'
-
       - name: Build and Deploy Collection
         if: steps.filter.outputs.win_docker == 'true'
         uses: artis3n/ansible_galaxy_collection@v2
